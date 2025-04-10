@@ -15,66 +15,58 @@ import {
 } from 'lucide-react'
 import { useState } from 'react';
 import { formatEventDate } from '@/lib/formatEventDate';
+import { useEffect } from 'react';
+import { supabase } from '../supabase-client';
 
 export default function Wishes() {
     const [showConfetti, setShowConfetti] = useState(false);
     const [newWish, setNewWish] = useState('');
+    const [name, setName] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [attendance, setAttendance] = useState('');
     const [isOpen, setIsOpen] = useState(false);
 
     const options = [
-        { value: 'ATTENDING', label: 'Ya, saya akan hadir' },
-        { value: 'NOT_ATTENDING', label: 'Tidak, saya tidak bisa hadir' },
-        { value: 'MAYBE', label: 'Mungkin, saya akan konfirmasi nanti' }
+        { value: 'attending', label: 'Ya, saya akan hadir' },
+        { value: 'not-attending', label: 'Tidak, saya tidak bisa hadir' },
+        { value: 'maybe', label: 'Mungkin, saya akan konfirmasi nanti' }
     ];
-    // Example wishes - replace with your actual data
-    const [wishes, setWishes] = useState([
-        {
-            id: 1,
-            name: "John Doe",
-            message: "Wishing you both a lifetime of love, laughter, and happiness! 🎉",
-            timestamp: "2024-12-24T23:20:00Z",
-            attending: "attending"
-        },
-        {
-            id: 2,
-            name: "Natalie",
-            message: "Wishing you both a lifetime of love, laughter, and happiness! 🎉",
-            timestamp: "2024-12-24T23:20:00Z",
-            attending: "attending"
-        },
-        {
-            id: 3,
-            name: "Abdur Rofi",
-            message: "Congratulations on your special day! May Allah bless your union! 🤲",
-            timestamp: "2024-12-25T23:08:09Z",
-            attending: "maybe"
-        }
-    ]);
+    const [wishes, setWishes] = useState([]);
+
+    useEffect(() => {
+        getWishes();
+    }, []);
+
+    async function getWishes() {
+        const { data } = await supabase.from("wishes").select("*");
+        setWishes(data);
+    }
 
     const handleSubmitWish = async (e) => {
         e.preventDefault();
         if (!newWish.trim()) return;
-
+        
         setIsSubmitting(true);
-        // Simulating API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-
+      
         const newWishObj = {
-            id: wishes.length + 1,
-            name: "Guest", // Replace with actual user name
-            message: newWish,
-            attend: "attending",
-            timestamp: new Date().toISOString()
+          name: name, // Replace with actual user name
+          message: newWish,
+          attending: attendance,
+          created_at: new Date().toISOString()
         };
-
-        setWishes(prev => [newWishObj, ...prev]);
-        setNewWish('');
-        setIsSubmitting(false);
-        setShowConfetti(true);
-        setTimeout(() => setShowConfetti(false), 3000);
-    };
+      
+        const { data, error } = await supabase.from('wishes').insert([newWishObj]);
+      
+        if (error) {
+          console.error(error);
+        } else {
+          setWishes(prev => [...prev, newWishObj]);
+          setNewWish('');
+          setIsSubmitting(false);
+          setShowConfetti(true);
+          setTimeout(() => setShowConfetti(false), 3000);
+        }
+      };
     const getAttendanceIcon = (status) => {
         switch (status) {
             case 'attending':
@@ -169,7 +161,7 @@ export default function Wishes() {
                                                 <div className="flex items-center space-x-1 text-gray-500 text-xs">
                                                     <Clock className="w-3 h-3" />
                                                     <time className="truncate">
-                                                        {formatEventDate(wish.timestamp)}
+                                                        {formatEventDate(wish.created_at)}
                                                     </time>
                                                 </div>
                                             </div>
@@ -181,7 +173,7 @@ export default function Wishes() {
                                         </p>
 
                                         {/* Optional: Time indicator for recent messages */}
-                                        {Date.now() - new Date(wish.timestamp).getTime() < 3600000 && (
+                                        {Date.now() - new Date(wish.created_at).getTime() < 3600000 && (
                                             <div className="absolute top-2 right-2">
                                                 <span className="px-2 py-1 rounded-full bg-rose-100 text-rose-600 text-xs font-medium">
                                                     New
@@ -214,6 +206,8 @@ export default function Wishes() {
                                         type="text"
                                         placeholder="Masukan nama kamu..."
                                         className="w-full px-4 py-2.5 rounded-xl bg-white/50 border border-rose-100 focus:border-rose-300 focus:ring focus:ring-rose-200 focus:ring-opacity-50 transition-all duration-200 text-gray-700 placeholder-gray-400"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                         required
                                     />
                                 </div>
@@ -285,6 +279,8 @@ export default function Wishes() {
                                     <textarea
                                         placeholder="Kirimkan harapan dan doa untuk kedua mempelai..."
                                         className="w-full h-32 p-4 rounded-xl bg-white/50 border border-rose-100 focus:border-rose-300 focus:ring focus:ring-rose-200 focus:ring-opacity-50 resize-none transition-all duration-200"
+                                        value={newWish}
+                                        onChange={(e) => setNewWish(e.target.value)}
                                         required
                                     />
                                 </div>
