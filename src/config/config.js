@@ -35,21 +35,21 @@ const config = {
       }
     ],
     audio: {
-      src: "/audio/fulfilling-humming.mp3",
-      title: "Fulfilling Humming",
+      src: "/audio/Rapsodi - JKT48.mp3",
+      title: "Rapsodi - JKT48",
       autoplay: true,
       loop: true
     },
     banks: [
       {
-        bank: "Bank Central Asia",
+        bank: "Bank Nasional Indonesia (BNI)",
         accountNumber: "1234567890",
-        accountName: "FULAN",
+        accountName: "KHONSA AZMI AFIFAH",
       },
       {
         bank: "Bank Mandiri",
         accountNumber: "0987654321",
-        accountName: "FULANA",
+        accountName: "KHONSA AZMI AFIFAH",
       }
     ]
   }
