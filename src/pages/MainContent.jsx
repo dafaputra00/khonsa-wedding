@@ -3,6 +3,7 @@ import Events from '@/pages/Events'
 import Location from '@/pages/Location';
 import Wishes from '@/pages/Wishes';
 import Gifts from '@/pages/Gifts';
+import Stories from './Stories';
 
 // Main Invitation Content
 export default function MainContent() {
@@ -11,6 +12,7 @@ export default function MainContent() {
             <Hero />
             <Events />
             <Location />
+            <Stories />
             <Gifts />
             <Wishes />
         </>
