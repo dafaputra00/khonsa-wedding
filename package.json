@@ -1,6 +1,6 @@
 {
   "name": "wedding",
-  "homepage": "https://undangan.azizdafaputra.com/khonsa-wedding",
+  "homepage": "https://undangan.azizdafaputra.com/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "pnpm run build && echo 'undangan.azizdafaputra.com' > dist/CNAME",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
