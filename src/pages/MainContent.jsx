@@ -15,6 +15,9 @@ export default function MainContent() {
             <Stories />
             <Gifts />
             <Wishes />
+            <footer className="text-center text-sm text-zinc-500 py-4">
+            Template by <a href="https://github.com/mrofisr" className="hover:underline" target="_blank" rel="noopener noreferrer">Abdur Rofi</a>, Modified by <a href="https://github.com/dafaputra00" className="hover:underline" target="_blank" rel="noopener noreferrer">Aziz</a> 💙 <a href="https://github.com/khonsaazmi" className="hover:underline" target="_blank" rel="noopener noreferrer">Khonsa</a>
+            </footer>
         </>
     )
 }
