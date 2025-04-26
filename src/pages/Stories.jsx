@@ -68,7 +68,7 @@ export default function Stories() {
                         </motion.div>
                         <div>
                             {config.data.stories.map((story, index) => (
-                                <div key={index} className='mb-2 flex flex-wrap lg:justify-center'>
+                                <div key={index} className='mb-6 p-3 rounded-xl shadow-lg bg-white dark:bg-neutral-900 flex flex-col items-center max-w-3xl mx-auto'>
                                     <motion.div 
                                         whileInView={{ opacity: 1, x: 0 }}
                                         initial={{ opacity: 0, x: -100 }}
@@ -79,7 +79,7 @@ export default function Stories() {
                                             width={150}
                                             height={150}
                                             alt={story.title} 
-                                            className='mb-6 rounded'
+                                            className='mb-6 rounded w-64 h-64 object-cover'
                                         />
                                     </motion.div>
                                     <motion.div 

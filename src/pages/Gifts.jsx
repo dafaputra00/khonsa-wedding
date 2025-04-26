@@ -40,7 +40,7 @@ export default function Gifts() {
                         transition={{ delay: 0.2 }}
                         className="inline-block text-rose-500 font-medium"
                     >
-                        Hadiah Pernikahan
+                        Hadiah
                     </motion.span>
 
                     <motion.h2
@@ -49,7 +49,7 @@ export default function Gifts() {
                         transition={{ delay: 0.3 }}
                         className="text-4xl md:text-5xl font-serif text-gray-800"
                     >
-                        Berikan Hadiah
+                        Hadiah Pernikahan
                     </motion.h2>
 
                     {/* Decorative Divider */}
@@ -72,14 +72,14 @@ export default function Gifts() {
                         className="space-y-4 max-w-md mx-auto"
                     >
                         {/* Arabic InsyaAllah */}
-                        <p className="font-arabic text-xl text-gray-800">
+                        {/* <p className="font-arabic text-xl text-gray-800">
                             إن شاء الله
-                        </p>
+                        </p> */}
 
                         {/* Main Message */}
-                        <p className="text-gray-600 leading-relaxed">
+                        {/* <p className="text-gray-600 leading-relaxed">
                             Insya Allah, Kami Akan Menyalurkan Semua Hadiah yang Diberikan ke Beberapa Masjid dan Lembaga yang Membutuhkan
-                        </p>
+                        </p> */}
 
                         {/* Arabic Dua */}
                         <div className="space-y-2">
