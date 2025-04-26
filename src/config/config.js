@@ -23,7 +23,7 @@ const config = {
         title: "Akad Nikah",
         date: "2025-06-21",
         startTime: "08:00",
-        endTime: "11:00",
+        endTime: "10:00",
         location: "Rumah",
         address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah 53115",
       },
@@ -31,7 +31,7 @@ const config = {
         title: "Resepsi Nikah",
         date: "2025-06-21",
         startTime: "11:00",
-        endTime: "17:00",
+        endTime: "14:00",
         location: "Rumah",
         address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah 53115",
       }
@@ -44,14 +44,14 @@ const config = {
     },
     banks: [
       {
-        bank: "Bank Central Asia",
-        accountNumber: "1234567890",
-        accountName: "FULAN",
+        bank: "Bank Rakyat Indonesia",
+        accountNumber: "683201024142532",
+        accountName: "Aziz Dafa Putra",
       },
       {
-        bank: "Bank Mandiri",
-        accountNumber: "0987654321",
-        accountName: "FULANA",
+        bank: "Bank Negara Indonesia",
+        accountNumber: "1339815649",
+        accountName: "Khonsa Azmi Afifah",
       }
     ],
     stories: [
