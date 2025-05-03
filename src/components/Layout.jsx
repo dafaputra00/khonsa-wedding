@@ -102,14 +102,14 @@ const Layout = ({ children }) => {
       audioRef.current.addEventListener('pause', handlePause);
     }
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    window.addEventListener('blur', handleWindowBlur);
-    window.addEventListener('focus', handleWindowFocus);
+    // document.addEventListener('visibilitychange', handleVisibilityChange);
+    // window.addEventListener('blur', handleWindowBlur);
+    // window.addEventListener('focus', handleWindowFocus);
 
     return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      window.removeEventListener('blur', handleWindowBlur);
-      window.removeEventListener('focus', handleWindowFocus);
+      // document.removeEventListener('visibilitychange', handleVisibilityChange);
+      // window.removeEventListener('blur', handleWindowBlur);
+      // window.removeEventListener('focus', handleWindowFocus);
 
       if (audioRef.current) {
         audioRef.current.removeEventListener('play', handlePlay);

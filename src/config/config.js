@@ -59,12 +59,12 @@ const config = {
     stories: [
       {
         title: "Kuliah",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        description: "Sebelumnya kita sudah kenal sejak SMA, namun baru mulai berkomunikasi setelah kuliah. Untuk beberapa tahun pertama kita hanya berkomunkasi setiap beberapa bulan sekali, baru di tahun ke-4 kita sering berkomunikasi dan akhirnya saling berkomitmen satu sama lain.",
         image: gambar
       },
       {
         title: "Lamaran",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        description: "Akhirnya setelah LDR selama 1 tahun lebih, aziz melamar khonsa pada tanggal 4 April 2024",
         image: gambar
       },
     ]
