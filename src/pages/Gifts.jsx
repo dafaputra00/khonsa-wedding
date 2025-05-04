@@ -81,6 +81,15 @@ export default function Gifts() {
                             Insya Allah, Kami Akan Menyalurkan Semua Hadiah yang Diberikan ke Beberapa Masjid dan Lembaga yang Membutuhkan
                         </p> */}
 
+                        <div className='space-y-2 my-6'>
+                            <p className='text-gray-800 text-lg'>
+                                List Referensi Hadiah
+                            </p>
+                            <a href="https://shorturl.at/6QzKr" target='_blank' className='hover:underline text-gray-600 italic text-base' rel="noopener noreferrer">
+                                klik disini
+                            </a>
+                        </div>
+
                         {/* Arabic Dua */}
                         <div className="space-y-2">
                             <p className="font-arabic text-lg text-gray-800">
@@ -90,6 +99,7 @@ export default function Gifts() {
                                 Jazakumullahu khairan, Barakallah fiikum
                             </p>
                         </div>
+
                     </motion.div>
 
                     {/* Optional: Additional Decorative Element */}

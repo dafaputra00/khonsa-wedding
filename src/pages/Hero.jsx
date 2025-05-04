@@ -236,23 +236,6 @@ export default function Hero() {
                                     <div className="w-2 h-2 rounded-full bg-rose-200" />
                                     <div className="h-px w-8 sm:w-12 bg-rose-200/50" />
                                 </div>
-
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ delay: 1.1 }}
-                                    className="space-y-2"
-                                >
-                                    <p className="text-gray-500 font-serif italic text-sm">
-                                        Kepada Yth.
-                                    </p>
-                                    <p className="text-gray-600 font-medium text-sm">
-                                        Bapak/Ibu/Saudara/i
-                                    </p>
-                                    <p className="text-rose-500 font-semibold text-lg">
-                                        {guestName ? guestName : "Tamu"}
-                                    </p>
-                                </motion.div>
                             </div>
 
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-px">

@@ -64,7 +64,7 @@ const config = {
       },
       {
         title: "Lamaran",
-        description: "Akhirnya setelah LDR selama 1 tahun lebih, aziz melamar khonsa pada tanggal 4 April 2024",
+        description: "Setelah LDR selama 1 tahun lebih, aziz melamar khonsa pada tanggal 4 April 2024",
         image: gambar
       },
     ]
