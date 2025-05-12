@@ -35,20 +35,20 @@ const config = {
       }
     ],
     audio: {
-      src: "/audio/Rapsodi - JKT48.mp3",
-      title: "Rapsodi - JKT48",
+      src: "/audio/Rapsodi - JKT48 (cut).mp3",
+      title: "Rapsodi - JKT48 (cut)",
       autoplay: true,
       loop: true
     },
     banks: [
       {
         bank: "Bank Nasional Indonesia (BNI)",
-        accountNumber: "1234567890",
+        accountNumber: "1339815649",
         accountName: "KHONSA AZMI AFIFAH",
       },
       {
         bank: "Bank Mandiri",
-        accountNumber: "0987654321",
+        accountNumber: "1800014925905",
         accountName: "KHONSA AZMI AFIFAH",
       }
     ]
