@@ -127,7 +127,7 @@ export default function Wishes() {
                         <Marquee speed={20}
                             gradient={false}
                             className="[--duration:20s] py-2">
-                            {wishes.map((wish, index) => (
+                            {wishes?.map((wish, index) => (
                                 <motion.div
                                     key={wish.id}
                                     initial={{ opacity: 0, y: 20 }}

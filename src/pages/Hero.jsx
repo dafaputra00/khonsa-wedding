@@ -139,7 +139,55 @@ export default function Hero() {
                             transition={{ delay: 0.6 }}
                             className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600"
                         >
-                            {config.data.groomName} & {config.data.brideName}
+                            {config.data.groomName}
+                        </motion.h2>
+                        <motion.h2
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className="text-sm sm:text-sm font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
+                        >
+                            Putra dari
+                        </motion.h2>
+                        <motion.h2
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className="text-lg sm:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
+                        >
+                            {config.data.parentGroom}
+                        </motion.h2>
+                        <motion.h2
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600"
+                        >
+                            &
+                        </motion.h2>
+                        <motion.h2
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600"
+                        >
+                            {config.data.brideName}
+                        </motion.h2>
+                        <motion.h2
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className="text-sm sm:text-sm font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
+                        >
+                            Putri dari
+                        </motion.h2>
+                        <motion.h2
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className="text-LG sm:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
+                        >
+                            {config.data.parentBride}
                         </motion.h2>
                     </div>
 
@@ -188,23 +236,6 @@ export default function Hero() {
                                     <div className="w-2 h-2 rounded-full bg-rose-200" />
                                     <div className="h-px w-8 sm:w-12 bg-rose-200/50" />
                                 </div>
-
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ delay: 1.1 }}
-                                    className="space-y-2"
-                                >
-                                    <p className="text-gray-500 font-serif italic text-sm">
-                                        Kepada Yth.
-                                    </p>
-                                    <p className="text-gray-600 font-medium text-sm">
-                                        Bapak/Ibu/Saudara/i
-                                    </p>
-                                    <p className="text-rose-500 font-semibold text-lg">
-                                        {guestName ? guestName : "Tamu"}
-                                    </p>
-                                </motion.div>
                             </div>
 
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-px">

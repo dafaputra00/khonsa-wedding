@@ -5,6 +5,7 @@ import {
   Home,
   CalendarHeart,
   MapPin,
+  Film,
   Gift,
   MessageCircleHeart
 } from 'lucide-react';
@@ -14,6 +15,7 @@ const menuItems = [
   { icon: Home, label: 'Beranda', href: '#home' },
   { icon: CalendarHeart, label: 'Event', href: '#event' },
   { icon: MapPin, label: 'Lokasi', href: '#location' },
+  { icon: Film, label: 'Stories', href: '#stories' },
   { icon: Gift, label: 'Hadiah', href: '#gifts' },
   { icon: MessageCircleHeart, label: 'Harapan', href: '#wishes' },
 ];
