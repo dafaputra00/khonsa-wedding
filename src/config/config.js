@@ -46,15 +46,14 @@ const config = {
     },
     banks: [
       {
-
-        bank: "Bank Rakyat Indonesia",
+        bank: "Bank Rakyat Indonesia (BRI)",
         accountNumber: "683201024142532",
-        accountName: "Aziz Dafa Putra",
+        accountName: "AZIZ DAFA PUTRA",
       },
       {
         bank: "Bank Negara Indonesia (BNI)",
         accountNumber: "1339815649",
-        accountName: "Khonsa Azmi Afifah",
+        accountName: "KHONSA AZMI AFIFAH",
       },
       {
         bank: "Bank Mandiri",
