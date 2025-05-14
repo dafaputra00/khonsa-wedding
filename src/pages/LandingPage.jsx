@@ -30,8 +30,28 @@ export default function LandingPage({ onOpenInvitation }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen relative overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${berduaan})` }}
+      style={{ 
+        backgroundImage: `url(${berduaan})`, 
+        // backgroundPosition: 'center 20px',
+        // backgroundSize: '160%' 
+      }}
     >
+
+      <style>
+        {`
+          .custom-bg {
+            background-size: 160%;
+            background-position: center 20px;
+          }
+
+          @media (min-width: 640px) {
+            .custom-bg {
+              background-size: cover;
+              background-position: center;
+            }
+          }
+        `}
+      </style>
       {/* Decorative Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-rose-50/30 to-white" />
       <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-rose-100/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
@@ -46,7 +66,7 @@ export default function LandingPage({ onOpenInvitation }) {
           className="w-full max-w-md"
         >
           {/* Card Container */}
-          <div className="backdrop-blur-sm bg-white/50 p-6 sm:p-8 md:p-10 rounded-2xl border border-rose-100/50 shadow-xl">
+          <div className="backdrop-blur-sm bg-white/0 p-6 sm:p-8 md:p-10 rounded-2xl border border-rose-100/50 shadow-xl">
             {/* Top Decorative Line */}
             <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
               <div className="h-px w-12 sm:w-16 bg-rose-200/50" />
