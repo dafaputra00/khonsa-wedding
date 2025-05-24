@@ -41,6 +41,8 @@ const config = {
     audio: {
       src: "/audio/Rapsodi - JKT48 (cut).mp3",
       title: "Rapsodi - JKT48 (cut)",
+      src: "/audio/Rapsodi - JKT48 (cut).mp3",
+      title: "Rapsodi - JKT48",
       autoplay: true,
       loop: true
     },
