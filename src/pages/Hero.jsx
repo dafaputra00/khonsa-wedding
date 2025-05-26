@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import config from "@/config/config";
 import { formatEventDate } from "@/lib/formatEventDate";
 import { safeBase64 } from "@/lib/base64";
+import foto1 from "../assets/foto1.jpg";
 
 export default function Hero() {
   const [guestName, setGuestName] = useState("");
@@ -196,7 +197,7 @@ export default function Hero() {
         className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 text-center relative overflow-hidden"
         // className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
         style={{
-          backgroundImage: `url('src/assets/background.jpg')`, // Ganti path sesuai file kamu
+          backgroundImage: `url(${foto1})`, // Ganti path sesuai file kamu
         }}
       >
         <motion.div
