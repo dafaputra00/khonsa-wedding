@@ -1,23 +1,23 @@
 // src/components/bottom-bar/BottomBar.jsx
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Home,
   CalendarHeart,
   MapPin,
   Film,
   Gift,
-  MessageCircleHeart
-} from 'lucide-react';
+  MessageCircleHeart,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-  { icon: Home, label: 'Beranda', href: '#home' },
-  { icon: CalendarHeart, label: 'Event', href: '#event' },
-  { icon: MapPin, label: 'Lokasi', href: '#location' },
-  { icon: Film, label: 'Stories', href: '#stories' },
-  { icon: Gift, label: 'Hadiah', href: '#gifts' },
-  { icon: MessageCircleHeart, label: 'Harapan', href: '#wishes' },
+  { icon: Home, label: "Beranda", href: "#home" },
+  { icon: CalendarHeart, label: "Event", href: "#event" },
+  { icon: MapPin, label: "Lokasi", href: "#location" },
+  { icon: Film, label: "Stories", href: "#stories" },
+  { icon: Gift, label: "Hadiah", href: "#gifts" },
+  { icon: MessageCircleHeart, label: "Harapan", href: "#wishes" },
 ];
 
 /**
@@ -37,7 +37,7 @@ const menuItems = [
  * @returns {JSX.Element} A JSX element containing the animated bottom navigation bar.
  */
 const BottomBar = () => {
-  const [active, setActive] = React.useState('home');
+  const [active, setActive] = React.useState("home");
 
   return (
     <motion.div
@@ -67,16 +67,18 @@ const BottomBar = () => {
                 className={cn(
                   "h-[18px] w-[18px] sm:h-5 sm:w-5 mb-0.5 sm:mb-1 transition-colors duration-200",
                   active === item.label.toLowerCase()
-                    ? "stroke-rose-500"
+                    ? "stroke-slate-500"
                     : "stroke-gray-600"
                 )}
               />
-              <span className={cn(
-                "text-[10px] sm:text-xs font-medium transition-all duration-200 line-clamp-1",
-                active === item.label.toLowerCase()
-                  ? "scale-105 text-rose-500"
-                  : "scale-100"
-              )}>
+              <span
+                className={cn(
+                  "text-[10px] sm:text-xs font-medium transition-all duration-200 line-clamp-1",
+                  active === item.label.toLowerCase()
+                    ? "scale-105 text-slate-500"
+                    : "scale-100"
+                )}
+              >
                 {item.label}
               </span>
             </motion.a>

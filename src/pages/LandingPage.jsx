@@ -49,7 +49,7 @@ export default function LandingPage({ onOpenInvitation }) {
           {/* Top Decorative Line */}
           <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
             <div className="h-px w-12 sm:w-16 bg-slate-200/50" />
-            <div className="w-2 h-2 rounded-full bg-slate-300" />
+            {/* <div className="w-2 h-2 rounded-full bg-slate-300" > */}
             <div className="h-px w-12 sm:w-16 bg-slate-200/50" />
           </div>
 

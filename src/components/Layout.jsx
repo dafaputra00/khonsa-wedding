@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Music, PauseCircle, PlayCircle } from 'lucide-react';
-import config from '@/config/config';
-import BottomBar from '@/components/BottomBar';
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Music, PauseCircle, PlayCircle } from "lucide-react";
+import config from "@/config/config";
+import BottomBar from "@/components/BottomBar";
 
 const Layout = ({ children }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
         setShowToast(true);
         setTimeout(() => setShowToast(false), 3000);
       } catch (error) {
-        console.log('Autoplay failed, waiting for user interaction');
+        console.log("Autoplay failed, waiting for user interaction");
         // Add click event listener for first interaction
         const handleFirstInteraction = async () => {
           try {
@@ -34,12 +34,12 @@ const Layout = ({ children }) => {
             wasPlayingRef.current = true;
             setShowToast(true);
             setTimeout(() => setShowToast(false), 3000);
-            document.removeEventListener('click', handleFirstInteraction);
+            document.removeEventListener("click", handleFirstInteraction);
           } catch (err) {
-            console.error('Playback failed after interaction:', err);
+            console.error("Playback failed after interaction:", err);
           }
         };
-        document.addEventListener('click', handleFirstInteraction);
+        document.addEventListener("click", handleFirstInteraction);
       }
     };
 
@@ -98,8 +98,8 @@ const Layout = ({ children }) => {
     };
 
     if (audioRef.current) {
-      audioRef.current.addEventListener('play', handlePlay);
-      audioRef.current.addEventListener('pause', handlePause);
+      audioRef.current.addEventListener("play", handlePlay);
+      audioRef.current.addEventListener("pause", handlePause);
     }
 
     // document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -112,8 +112,8 @@ const Layout = ({ children }) => {
       // window.removeEventListener('focus', handleWindowFocus);
 
       if (audioRef.current) {
-        audioRef.current.removeEventListener('play', handlePlay);
-        audioRef.current.removeEventListener('pause', handlePause);
+        audioRef.current.removeEventListener("play", handlePlay);
+        audioRef.current.removeEventListener("pause", handlePause);
       }
     };
   }, [isPlaying]);
@@ -130,7 +130,7 @@ const Layout = ({ children }) => {
           wasPlayingRef.current = true;
         }
       } catch (error) {
-        console.error('Playback error:', error);
+        console.error("Playback error:", error);
       }
     }
   };
@@ -144,8 +144,8 @@ const Layout = ({ children }) => {
       }
     };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
   }, []);
 
   return (
@@ -163,21 +163,19 @@ const Layout = ({ children }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={toggleMusic}
-          className="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-rose-100/50"
+          className="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-slate-100/50"
         >
           {isPlaying ? (
             <div className="relative">
-              <PauseCircle className="w-6 h-6 text-rose-500" />
+              <PauseCircle className="w-6 h-6 text-slate-500" />
               <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             </div>
           ) : (
-            <PlayCircle className="w-6 h-6 text-rose-500" />
+            <PlayCircle className="w-6 h-6 text-slate-500" />
           )}
         </motion.button>
 
-        <main className="relative h-full w-full pb-[100px]">
-          {children}
-        </main>
+        <main className="relative h-full w-full pb-[100px]">{children}</main>
         <BottomBar />
         {/* Music Info Toast */}
         <AnimatePresence>

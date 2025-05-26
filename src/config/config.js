@@ -5,12 +5,16 @@ const config = {
     title: "Pernikahan Aziz & Khonsa",
     description:
       "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.",
+    groomPhoto: "src/assets/groom.png",
     groomName: "Aziz Dafa Putra",
     groomInitial: "Aziz",
+    bridePhoto: "src/assets/bride.png",
     brideName: "Khonsa Azmi Afifah",
     brideInitial: "Khonsa",
-    parentGroom: "Bapak Digdo Warsono & Ibu Fathur Rokhmah",
-    parentBride: "Bapak Karsim & Ibu Kris Winarti",
+    parentGroom: "Bapak Digdo Warsono, S.Pd. & Ibu Fathur Rokhmah, S.Pd.",
+    fromGroom: "Kemranjen, Banyumas",
+    fromBride: "Purwokerto, Banyumas",
+    parentBride: "Bapak Karsim, S.Ag. & Ibu Kris Winarti, S.Pd.",
     date: "2025-06-21",
     maps_url: "https://maps.app.goo.gl/kXgsHdp4tYkuQmgG9",
     maps_embed:
@@ -26,7 +30,7 @@ const config = {
         date: "2025-06-21",
         startTime: "08:00",
         endTime: "10:00",
-        location: "Rumah",
+        location: "Rumah Mempelai Wanita",
         address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah 53115",
       },
       {
@@ -34,7 +38,7 @@ const config = {
         date: "2025-06-21",
         startTime: "11:00",
         endTime: "14:00",
-        location: "Rumah",
+        location: "Rumah Mempelai Wanita",
         address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah 53115",
       }
     ],
