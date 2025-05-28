@@ -47,9 +47,11 @@ export default function Stories() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="text-gray-500 max-w-md mx-auto"
+              className="text-gray-500 max-w-md mx-4"
             >
-              hehe
+              Semua berawal dari pertemuan biasa yang berubah jadi luar biasa.
+              Inilah kisah kami, perjalanan dua hati yang perlahan tapi pasti
+              saling menemukan.
             </motion.p>
 
             {/* Decorative Line */}
@@ -78,13 +80,13 @@ export default function Stories() {
                     transition={{ duration: 1 }}
                     className="flex items-center justify-center w-full lg:w-1/4"
                   >
-                    <img
+                    {/* <img
                       src={story.image}
                       width={150}
                       height={150}
                       alt={story.title}
                       className="mb-6 rounded w-64 h-64 object-cover"
-                    />
+                    /> */}
                   </motion.div>
                   <motion.div
                     whileInView={{ opacity: 1, x: 0 }}

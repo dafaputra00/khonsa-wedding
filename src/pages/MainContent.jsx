@@ -4,16 +4,23 @@ import Location from "@/pages/Location";
 import Wishes from "@/pages/Wishes";
 import Gifts from "@/pages/Gifts";
 import Stories from "./Stories";
-import berduaan from "../assets/lamaran-rumput.jpg";
+import background1 from "../assets/background1.png";
+import { motion } from "framer-motion";
 
 // Main Invitation Content
 export default function MainContent() {
   return (
     <div
-      className="min-h-screen w-full bg-contain bg-center"
-      // style={{ backgroundImage: `url(${berduaan})` }}
+      className="min-h-screen w-full bg-contain bg-center bg-repeat"
+      // style={{ backgroundImage: `url(${background1})` }}
     >
-      <div className="bg-white/70 backdrop-blur-0 min-h-screen w-full">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        style={{ backgroundImage: `url(${background1})` }}
+        className="bg-slate-200 backdrop-blur-0 min-h-screen w-full bg-contain bg-center bg-repeat"
+      >
         <Hero />
         <Events />
         <Location />
@@ -49,7 +56,7 @@ export default function MainContent() {
             Khonsa
           </a>
         </footer>
-      </div>
+      </motion.div>
     </div>
   );
 }

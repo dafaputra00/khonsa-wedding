@@ -1,9 +1,52 @@
 import EventCards from "@/components/EventsCard";
+import { useEffect, useState } from "react";
+import { formatEventDate } from "@/lib/formatEventDate";
 import config from "@/config/config";
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
 export default function Events() {
+  const CountdownTimer = ({ targetDate }) => {
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    function calculateTimeLeft() {
+      const difference = +new Date(targetDate) - +new Date();
+      let timeLeft = {};
+
+      if (difference > 0) {
+        timeLeft = {
+          hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          menit: Math.floor((difference / 1000 / 60) % 60),
+          detik: Math.floor((difference / 1000) % 60),
+        };
+      }
+      return timeLeft;
+    }
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
+      return () => clearInterval(timer);
+    }, [targetDate]);
+
+    return (
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+        {Object.keys(timeLeft).map((interval) => (
+          <motion.div
+            key={interval}
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-100"
+          >
+            <span className="text-xl sm:text-2xl font-bold text-slate-600">
+              {timeLeft[interval]}
+            </span>
+            <span className="text-xs text-gray-500 capitalize">{interval}</span>
+          </motion.div>
+        ))}
+      </div>
+    );
+  };
   return (
     <>
       {/* Event Section */}
@@ -69,7 +112,8 @@ export default function Events() {
               <div className="h-[1px] w-12 bg-slate-200" />
             </motion.div>
           </motion.div>
-
+          <CountdownTimer targetDate={config.data.date} />
+          <div className="py-5"></div>
           {/* Events Grid */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}

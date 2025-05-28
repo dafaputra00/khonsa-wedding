@@ -5,6 +5,8 @@ import config from "@/config/config";
 import { formatEventDate } from "@/lib/formatEventDate";
 import { safeBase64 } from "@/lib/base64";
 import foto1 from "../assets/foto1.jpg";
+import jarimanis from "../assets/jarimanis.png";
+import backgroundHero from "../assets/background1.png";
 
 export default function Hero() {
   const [guestName, setGuestName] = useState("");
@@ -111,11 +113,14 @@ export default function Hero() {
   return (
     <>
       {/* nanti dipindah ke layout baru */}
-      <section
+      <motion.section
         id="hero-background"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
         className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
         style={{
-          backgroundImage: `url('src/assets/foto1.jpg')`, // Ganti path sesuai file kamu
+          backgroundImage: `url(${foto1})`, // Ganti path sesuai file kamu
         }}
       >
         <div className="absolute inset-0 bg-white/10 z-0" />
@@ -123,7 +128,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           className="absolute top-16 z-10 text-white"
         >
           <h1 className="text-4xl sm:text-6xl font-serif font-bold mb-2">
@@ -138,12 +143,12 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           className="absolute bottom-16 z-10 text-white"
         >
           <h1 className="text-sm sm:text-xl font-bold mb-2">21 . 06 . 2025</h1>
         </motion.div>
-      </section>
+      </motion.section>
 
       <section
         id="surat"
@@ -156,20 +161,20 @@ export default function Hero() {
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
           className="flex z-10 text-white"
         >
-          <img src="src/assets/jarimanis.png" alt="promise" className="w-40" />
+          <img src={jarimanis} alt="promise" className="w-40" />
         </motion.div>
 
         <motion.div
           // initial={{ opacity: 0, scale: 0.9 }}
           // animate={{ opacity: 1, scale: 1 }}
-          // transition={{ duration: 1 }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
+          // transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0, duration: 0.5 }}
           className="flex center z-10 text-white mx-12"
         >
           <h2 className="text-sm sm:text-sm italic mb-4">
@@ -181,9 +186,9 @@ export default function Hero() {
           </h2>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0, duration: 0.5 }}
           className="flex center z-10 text-white mx-12"
         >
           <h1 className="text-sm sm:text-sm italic font-bold mb-2">
@@ -192,52 +197,56 @@ export default function Hero() {
         </motion.div>
       </section>
 
-      <section
+      <motion.section
         id="home"
-        className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 text-center relative overflow-hidden"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
         // className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
-        style={{
-          backgroundImage: `url(${foto1})`, // Ganti path sesuai file kamu
-        }}
+        // className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 text-center relative overflow-hidden"
+        className="relative w-full  bg-cover bg-center flex flex-col justify-center items-center text-center py-10"
+        // style={{
+        //   backgroundImage: `url(${backgroundHero})`, // Ganti path sesuai file kamu
+        // }}
       >
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0, duration: 0.5 }}
           className="space-y-6 relative z-10"
         >
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0, duration: 0.5 }}
             className="text-gray-500 font-light text-xl sm:text-3xl"
           >
             بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
           </motion.p>
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0, duration: 0.5 }}
             className="inline-block mx-auto"
           >
             <span className="px-4 py-1 text-sm bg-slate-50 text-slate-600 rounded-full border border-slate-200">
-              Catat Tanggal Penting Ini
+              Assalamualaikum Warahmatullahi Wabarakatuh
             </span>
           </motion.div>
 
           <div className="space-y-4">
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
               className="text-gray-500 font-light italic text-base sm:text-lg"
             >
               In Syaa Allah Kami Akan Menikah
             </motion.p>
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
               className="flex justify-center items-center"
             >
               <div className="w-48 h-48 rounded-full overflow-hidden border-1 border-slate-600">
@@ -248,15 +257,44 @@ export default function Hero() {
                 />
               </div>
             </motion.div>
-
             <motion.h2
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
               className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600"
             >
               {config.data.groomName}
             </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="text-sm flex justify-center"
+            >
+              <div className="bg-gray-100 px-3 py-2 rounded-sm shadow-md">
+                <a
+                  href="https://instagram.com/dafa_putra_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-gray-800 no-underline focus:no-underline active:no-underline hover:no-underline"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.75-.88a1.13 1.13 0 110 2.25 1.13 1.13 0 010-2.25z" />
+                  </svg>
+                  @dafa_putra_
+                </a>
+              </div>
+            </motion.div>
+
+            {/* <div class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow">
+        <img src="https://via.placeholder.com/100" alt="Foto Mempelai Pria" class="w-24 h-24 rounded-full object-cover mb-4">
+        <h3 class="text-lg font-medium text-gray-700">Nama Mempelai Pria</h3>
+        
+      </div> */}
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -269,7 +307,7 @@ export default function Hero() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-sm sm:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
+              className="text-sm sm:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800 mx-4"
             >
               {config.data.parentGroom}
             </motion.h2>
@@ -277,9 +315,9 @@ export default function Hero() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-sm sm:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
+              className="text-xs sm:text-sm  font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800 mx-4"
             >
-              {config.data.fromGroom}
+              ({config.data.fromGroom})
             </motion.h2>
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
@@ -307,10 +345,34 @@ export default function Hero() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600"
+              className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600 mx-2"
             >
               {config.data.brideName}
             </motion.h2>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="text-sm flex justify-center"
+            >
+              <div className="bg-gray-100 px-3 py-2 rounded-sm shadow-md">
+                <a
+                  href="https://instagram.com/khonsaazmi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-gray-800 no-underline focus:no-underline active:no-underline hover:no-underline"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.75-.88a1.13 1.13 0 110 2.25 1.13 1.13 0 010-2.25z" />
+                  </svg>
+                  @khonsaazmi
+                </a>
+              </div>
+            </motion.div>
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -331,9 +393,9 @@ export default function Hero() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-sm sm:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
+              className="text-sm sm:text-sm font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
             >
-              {config.data.fromBride}
+              ({config.data.fromBride})
             </motion.h2>
           </div>
 
@@ -367,7 +429,7 @@ export default function Hero() {
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1 }}
+                    transition={{ delay: 0 }}
                     className="flex items-center justify-center space-x-2"
                   >
                     <Clock className="w-4 h-4 text-slate-400" />
@@ -393,7 +455,7 @@ export default function Hero() {
             <div className="absolute -bottom-2 -left-2 w-16 sm:w-24 h-16 sm:h-24 bg-slate-100/20 rounded-full blur-xl" />
           </motion.div>
 
-          <CountdownTimer targetDate={config.data.date} />
+          {/* <CountdownTimer targetDate={config.data.date} /> */}
 
           <div className="pt-6 relative">
             <FloatingHearts />
@@ -415,7 +477,7 @@ export default function Hero() {
             </motion.div>
           </div>
         </motion.div>
-      </section>
+      </motion.section>
     </>
   );
 }

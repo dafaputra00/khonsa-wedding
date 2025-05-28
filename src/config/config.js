@@ -20,8 +20,8 @@ const config = {
     maps_embed:
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.27917029128463!2d109.23663769999999!3d-7.4134842999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655f216b72c121%3A0xa2c06bfb792587c1!2sYahya%20Travel!5e0!3m2!1sid!2sid!4v1744308825952!5m2!1sid!2sid",
     time: "08:00 - 14:00 WIB",
-    location: "Rumah",
-    address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah 53115",
+    location: "Rumah Mempelai Wanita",
+    address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah",
     ogImage: "/images/og-image.jpg",
     favicon: "/images/favicon.ico",
     agenda: [
@@ -69,13 +69,23 @@ const config = {
     ],
     stories: [
       {
+        title: "SMA",
+        description: "Pertemuan pertama kami terjadi di SMA, saat itu kami berada di sekolah yang sama namun berbeda kelas. Kami mulai berkenalan saat latihan lempar lembing untuk popda, dan sejak saat itu kita mulai saling mengenal.",
+        image: gambar
+      },
+      {
         title: "Kuliah",
-        description: "Sebelumnya kita sudah kenal sejak SMA, namun baru mulai berkomunikasi setelah kuliah. Untuk beberapa tahun pertama kita hanya berkomunkasi setiap beberapa bulan sekali, baru di tahun ke-4 kita sering berkomunikasi dan akhirnya saling berkomitmen satu sama lain.",
+        description: "Setelah lulus SMA, kami berdua melanjutkan kuliah di kampus yang sama. Di sinilah benih - benih cinta kami mulai tumbuh. Kami sering menghabiskan waktu bersama di kampus, belajar, dan berbagi cerita.",
+        image: gambar
+      },
+      {
+        title: "Komitmen",
+        description: "Skripsi adalah momen penting dalam hubungan kami. Kami saling mendukung dan membantu satu sama lain dalam menyelesaikan tugas akhir kami. Ini adalah saat di mana kami berdua merasa semakin dekat dan yakin untuk melangkah ke jenjang yang lebih serius.",
         image: gambar
       },
       {
         title: "Lamaran",
-        description: "Setelah LDR selama 1 tahun lebih, aziz melamar khonsa pada tanggal 4 April 2024",
+        description: "2 tahun setelah berkomitmen, Aziz datang bersama orang tuanya untuk melamar Khonsa. Momen ini sangat spesial bagi kami berdua, karena ini adalah langkah awal menuju pernikahan yang kami impikan.",
         image: gambar
       },
     ]
