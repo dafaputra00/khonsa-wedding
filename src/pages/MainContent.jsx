@@ -4,7 +4,7 @@ import Location from "@/pages/Location";
 import Wishes from "@/pages/Wishes";
 import Gifts from "@/pages/Gifts";
 import Stories from "./Stories";
-import background1 from "../assets/background1.png";
+import background1 from "../assets/background2.png";
 import { motion } from "framer-motion";
 
 // Main Invitation Content
