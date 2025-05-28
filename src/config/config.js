@@ -6,10 +6,10 @@ const config = {
     description:
       "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.",
     groomPhoto: "src/assets/groom.png",
-    groomName: "Aziz Dafa Putra",
+    groomName: "Aziz Dafa Putra, S.Kom.",
     groomInitial: "Aziz",
     bridePhoto: "src/assets/bride.png",
-    brideName: "Khonsa Azmi Afifah",
+    brideName: "Khonsa Azmi Afifah, S.Si.",
     brideInitial: "Khonsa",
     parentGroom: "Bapak Digdo Warsono, S.Pd. & Ibu Fathur Rokhmah, S.Pd.",
     fromGroom: "Kemranjen, Banyumas",
