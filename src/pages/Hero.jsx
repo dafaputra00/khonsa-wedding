@@ -261,7 +261,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0, duration: 0.5 }}
-              className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600"
+              className="text-3xl sm:text-4xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600"
             >
               {config.data.groomName}
             </motion.h2>
@@ -289,12 +289,6 @@ export default function Hero() {
                 </a>
               </div>
             </motion.div>
-
-            {/* <div class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow">
-        <img src="https://via.placeholder.com/100" alt="Foto Mempelai Pria" class="w-24 h-24 rounded-full object-cover mb-4">
-        <h3 class="text-lg font-medium text-gray-700">Nama Mempelai Pria</h3>
-        
-      </div> */}
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -345,7 +339,7 @@ export default function Hero() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600 mx-2"
+              className="text-3xl sm:text-4xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600 mx-2"
             >
               {config.data.brideName}
             </motion.h2>
