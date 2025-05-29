@@ -104,7 +104,7 @@ export default function Gifts() {
               initial={{ scale: 0 }}
               animate={hasAnimated ? { scale: 1 } : {}}
               transition={{ delay: 0.6 }}
-              className="flex items-center justify-center gap-3 pt-4"
+              className="flex items-center justify-center gap-3 pt-2"
             >
               <div className="h-px w-8 bg-slate-200/50" />
               <div className="w-1.5 h-1.5 rounded-full bg-slate-300" />
