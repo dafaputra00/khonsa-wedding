@@ -28,6 +28,14 @@ const config = {
     favicon: "/images/favicon.ico",
     agenda: [
       {
+        title: "Tasyakuran",
+        date: "2025-06-20",
+        startTime: "11:00",
+        endTime: "Selesai",
+        location: "Rumah Mempelai Wanita",
+        address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah 53115",
+      },
+      {
         title: "Akad Nikah",
         date: "2025-06-21",
         startTime: "08:00",
@@ -36,7 +44,7 @@ const config = {
         address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah 53115",
       },
       {
-        title: "Resepsi Nikah",
+        title: "Resepsi Nikah ☑️",
         date: "2025-06-21",
         startTime: "11:00",
         endTime: "14:00",
@@ -89,6 +97,32 @@ const config = {
         title: "Lamaran",
         description: "2 tahun setelah berkomitmen, Aziz datang bersama orang tuanya untuk melamar Khonsa. Momen ini sangat spesial bagi kami berdua, karena ini adalah langkah awal menuju pernikahan yang kami impikan.",
         image: gambar
+      },
+    ],
+    galleries: [
+      {
+        src: "/src/assets/bnw1.png",
+        alt: "Prewedding Photo 1",
+      },
+      {
+        src: "/src/assets/bnw2.png",
+        alt: "Prewedding Photo 2",
+      },
+      {
+        src: "/src/assets/bnw3.png",
+        alt: "Prewedding Photo 2",
+      },
+      {
+        src: "/src/assets/lamaran1.png",
+        alt: "Lamaran Photo 1",
+      },
+      {
+        src: "/src/assets/lamaran2.png",
+        alt: "Lamaran Photo 2",
+      },
+      {
+        src: "/src/assets/lamaran3.jpg",
+        alt: "Lamaran Photo 3",
       },
     ]
   }

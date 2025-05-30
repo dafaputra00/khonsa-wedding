@@ -35,7 +35,7 @@ export default function Events() {
           <motion.div
             key={interval}
             initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            whileInView={{ scale: 1, opacity: 1 }}
             className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-100"
           >
             <span className="text-xl sm:text-2xl font-bold text-slate-600">
@@ -69,7 +69,7 @@ export default function Events() {
             <motion.span
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.2 }}
               className="inline-block text-slate-500 font-medium mb-2"
             >
@@ -94,7 +94,7 @@ export default function Events() {
               className="text-gray-500 max-w-md mx-auto"
             >
               Kami Mengundang Anda untuk Merayakan Hari Istimewa Sebagai Awal
-              Perjalanan Cinta Kami
+              Perjalanan Cinta Kami Pada:
             </motion.p>
 
             {/* Decorative Line */}
