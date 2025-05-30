@@ -113,9 +113,9 @@ export default function Hero() {
       {/* nanti dipindah ke layout baru */}
       <motion.section
         id="hero-intro"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0.4, scale: 1.1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2 }}
         className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
         style={{
           backgroundImage: `url(${foto1})`, // Ganti path sesuai file kamu
