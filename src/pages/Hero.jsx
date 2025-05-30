@@ -2,11 +2,9 @@ import { Calendar, Clock, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import config from "@/config/config";
-import { formatEventDate } from "@/lib/formatEventDate";
 import { safeBase64 } from "@/lib/base64";
 import foto1 from "../assets/foto1.jpg";
 import jarimanis from "../assets/jarimanis.png";
-import backgroundHero from "../assets/background1.png";
 
 export default function Hero() {
   const [guestName, setGuestName] = useState("");
@@ -114,16 +112,16 @@ export default function Hero() {
     <>
       {/* nanti dipindah ke layout baru */}
       <motion.section
-        id="hero-background"
+        id="hero-intro"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
         style={{
           backgroundImage: `url(${foto1})`, // Ganti path sesuai file kamu
         }}
       >
-        <div className="absolute inset-0 bg-white/10 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-800 via-slate-200/10 via-slate-200/10 via-slate-100/10 via-slate-100/10 to-white/10 z-0" />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -243,80 +241,7 @@ export default function Hero() {
             >
               In Syaa Allah Kami Akan Menikah
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0, duration: 0.5 }}
-              className="flex justify-center items-center"
-            >
-              <div className="w-48 h-48 rounded-full overflow-hidden border-1 border-slate-600">
-                <img
-                  src={config.data.groomPhoto}
-                  alt="Groom Photo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0, duration: 0.5 }}
-              className="text-3xl sm:text-4xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 via- slate-400 to-slate-500"
-            >
-              {config.data.groomName}
-            </motion.h2>
-            <motion.a
-              href={`https://www.instagram.com/${config.data.groomInsta}/`}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0, duration: 0.5 }}
-              className="text-sm flex justify-center"
-            >
-              <div className="bg-gray-100 px-2 py-2 rounded-lg shadow-md flex items-center">
-                <svg
-                  className="w-5 h-5 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.75-.88a1.13 1.13 0 110 2.25 1.13 1.13 0 010-2.25z" />
-                </svg>
-                <span className="text-center">@{config.data.groomInsta}</span>
-              </div>
-            </motion.a>
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0, duration: 0.5 }}
-              className="text-sm sm:text-sm font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
-            >
-              Putra dari
-            </motion.h2>
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0, duration: 0.5 }}
-              className="text-sm sm:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800 mx-4"
-            >
-              {config.data.parentGroom}
-            </motion.h2>
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0, duration: 0.5 }}
-              className="text-xs sm:text-sm  font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800 mx-4"
-            >
-              ({config.data.fromGroom})
-            </motion.h2>
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0, duration: 0.5 }}
-              className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600"
-            >
-              &
-            </motion.h2>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -382,6 +307,80 @@ export default function Hero() {
               className="text-sm sm:text-sm font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
             >
               ({config.data.fromBride})
+            </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="text-3xl sm:text-5xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-pink-600"
+            >
+              &
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="flex justify-center items-center"
+            >
+              <div className="w-48 h-48 rounded-full overflow-hidden border-1 border-slate-600">
+                <img
+                  src={config.data.groomPhoto}
+                  alt="Groom Photo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="text-3xl sm:text-4xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-600 via- slate-400 to-slate-500"
+            >
+              {config.data.groomName}
+            </motion.h2>
+            <motion.a
+              href={`https://www.instagram.com/${config.data.groomInsta}/`}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="text-sm flex justify-center"
+            >
+              <div className="bg-gray-100 px-2 py-2 rounded-lg shadow-md flex items-center">
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.75-.88a1.13 1.13 0 110 2.25 1.13 1.13 0 010-2.25z" />
+                </svg>
+                <span className="text-center">@{config.data.groomInsta}</span>
+              </div>
+            </motion.a>
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="text-sm sm:text-sm font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800"
+            >
+              Putra dari
+            </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="text-sm sm:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800 mx-4"
+            >
+              {config.data.parentGroom}
+            </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="text-xs sm:text-sm  font-serif bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800 mx-4"
+            >
+              ({config.data.fromGroom})
             </motion.h2>
           </div>
 
