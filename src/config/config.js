@@ -88,12 +88,12 @@ const config = {
     stories: [
       {
         title: "SMA",
-        description: "Pertemuan pertama kami terjadi di SMA, saat itu kami berada di sekolah yang sama namun berbeda kelas. Kami mulai berkenalan saat latihan lempar lembing untuk popda, dan sejak saat itu kita mulai saling mengenal.",
+        description: "Pertemuan pertama kami terjadi di SMA, saat itu kami berada di sekolah yang sama namun berbeda kelas. Kami mulai berkenalan saat latihan lempar lembing untuk popda, dan sejak saat itu kami mulai saling mengenal.",
         image: gambar
       },
       {
         title: "Kuliah",
-        description: "Setelah lulus SMA, kami berdua melanjutkan kuliah di kampus yang sama. Di sinilah benih - benih cinta kami mulai tumbuh. Kami sering menghabiskan waktu bersama di kampus, belajar, dan berbagi cerita.",
+        description: "Setelah lulus SMA, kami dipertemukan kembali di kampus yang sama, fakultas yang sama, namun dengan prodi yang berbeda. Di tempat inilah benih - benih cinta kami mulai tumbuh. Kami mengukir banyak momen bersama di kampus, belajar, dan berbagi cerita.",
         image: gambar
       },
       {
@@ -103,7 +103,7 @@ const config = {
       },
       {
         title: "Lamaran",
-        description: "2 tahun setelah berkomitmen, Aziz datang bersama orang tuanya untuk melamar Khonsa. Momen ini sangat spesial bagi kami berdua, karena ini adalah langkah awal menuju pernikahan yang kami impikan.",
+        description: "2 tahun setelah berkomitmen, Aziz datang bersama keluarganya untuk melamar Khonsa. Momen ini sangat spesial bagi kami berdua, karena ini adalah langkah awal menuju pernikahan yang kami impikan.",
         image: gambar
       },
     ],
