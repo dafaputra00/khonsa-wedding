@@ -1,14 +1,6 @@
 import config from "@/config/config";
-import {
-  Clock,
-  Navigation as NavigationIcon,
-  MapPin,
-  CalendarCheck,
-  Phone,
-  ExternalLink,
-} from "lucide-react";
+import { MapPin, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
-import { formatEventDate } from "@/lib/formatEventDate";
 
 export default function Location() {
   return (
@@ -80,18 +72,6 @@ export default function Location() {
                       {config.data.address}
                     </p>
                   </div>
-
-                  {/* <div className="flex items-center space-x-4">
-                    <CalendarCheck className="w-5 h-5 text-slate-500" />
-                    <p className="text-gray-600">
-                      {formatEventDate(config.data.date)}
-                    </p>
-                  </div> */}
-
-                  {/* <div className="flex items-center space-x-4">
-                    <Clock className="w-5 h-5 text-slate-500" />
-                    <p className="text-gray-600">{config.data.time}</p>
-                  </div> */}
 
                   {/* Action Button - Full Width */}
                   <div className="pt-4">
