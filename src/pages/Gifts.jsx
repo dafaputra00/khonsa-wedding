@@ -69,7 +69,7 @@ export default function Gifts() {
               <div className="space-y-2 my-6">
                 <p className="text-gray-800 text-lg">List Referensi Hadiah</p>
                 <a
-                  href="/src/GiftRegistry.jsx"
+                  href="https://shorturl.at/6QzKr"
                   target="_blank"
                   className="hover:underline text-gray-600 italic text-base"
                   rel="noopener noreferrer"
