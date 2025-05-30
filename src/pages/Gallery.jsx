@@ -15,16 +15,21 @@ export default function Location() {
         className="min-h-screen relative overflow-hidden"
         ref={containerRef}
       >
-        <h2 className="text-4xl text-center mb-8 mx-4 md:mx-0 font-serif text-gray-800">
-          Wedding Gallery
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-4xl text-center mb-8 mx-4 md:mx-0 font-serif text-gray-800">
+            Wedding Gallery
+          </h2>
+        </motion.div>
 
         {/* Decorative Line */}
         <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
           className="flex items-center justify-center gap-4 mt-8 mb-8"
         >
           <div className="h-[1px] w-12 bg-slate-200" />
