@@ -33,10 +33,9 @@ export default function Stories() {
             </motion.span>
 
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-serif text-gray-800 leading-tight"
             >
               Perjalanan kami berdua
