@@ -39,9 +39,9 @@ export default function Location() {
           <div className="h-[1px] w-12 bg-slate-200" />
         </motion.div>
 
-        <div className="relative px-2 md:px-0">
+        <div className="relative px-2 md:px-1">
           {/* Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-2 auto-rows-[250px] md:auto-rows-[320px]">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-3 auto-rows-[250px] md:auto-rows-[320px]">
             {config.data.galleries.map((image, index) => (
               <div key={index} className={`${image.span}`}>
                 <img
@@ -66,7 +66,6 @@ export default function Location() {
               >
                 <motion.div
                   className="relative"
-                  //   onClick={(e) => e.stopPropagation()} // ⛔ prevents background click from closing
                   initial={{ scale: 0.85, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.85, opacity: 0 }}
