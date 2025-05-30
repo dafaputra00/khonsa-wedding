@@ -71,7 +71,7 @@ export default function Stories() {
               {config.data.stories.map((story, index) => (
                 <div
                   key={index}
-                  className="mb-6 p-3 rounded-xl shadow-lg bg-white dark:bg-neutral-900 flex flex-col items-center max-w-3xl mx-auto"
+                  className="mb-6 p-2 rounded-xl shadow-lg bg-white dark:bg-neutral-900 flex flex-col items-center max-w-3xl mx-auto"
                 >
                   <motion.div
                     whileInView={{ opacity: 1, x: 0 }}
