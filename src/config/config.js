@@ -96,7 +96,7 @@ const config = {
       },
       {
         title: "Komitmen",
-        description: "Skripsi adalah momen penting dalam hubungan kami. Kami saling mendukung dan membantu satu sama lain dalam menyelesaikan tugas akhir kami. Ini adalah saat di mana kami berdua merasa semakin dekat dan yakin untuk melangkah ke jenjang yang lebih serius.",
+        description: "Skripsi adalah momen penting dalam hubungan kami. Kami saling mendukung dan membantu satu sama lain dalam menyelesaikan skripsi. Pada momen inilah, kami berdua merasa semakin dekat dan yakin untuk berkomitmen melangkah ke jenjang yang lebih serius.",
         image: gambar
       },
       {
