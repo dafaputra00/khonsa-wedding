@@ -66,16 +66,6 @@ export default function Gifts() {
               transition={{ delay: 0.5 }}
               className="space-y-4 max-w-md mx-auto"
             >
-              {/* Arabic InsyaAllah */}
-              {/* <p className="font-arabic text-xl text-gray-800">
-                            إن شاء الله
-                        </p> */}
-
-              {/* Main Message */}
-              {/* <p className="text-gray-600 leading-relaxed">
-                            Insya Allah, Kami Akan Menyalurkan Semua Hadiah yang Diberikan ke Beberapa Masjid dan Lembaga yang Membutuhkan
-                        </p> */}
-
               <div className="space-y-2 my-6">
                 <p className="text-gray-800 text-lg">List Referensi Hadiah</p>
                 <a

@@ -1,4 +1,4 @@
-import { Calendar, Clock, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import config from "@/config/config";
@@ -7,7 +7,7 @@ import foto1 from "../assets/foto1.jpg";
 import jarimanis from "../assets/jarimanis.png";
 
 export default function Hero() {
-  const [guestName, setGuestName] = useState("");
+  const [setGuestName] = useState("");
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -23,48 +23,6 @@ export default function Hero() {
       }
     }
   }, []);
-
-  const CountdownTimer = ({ targetDate }) => {
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-    function calculateTimeLeft() {
-      const difference = +new Date(targetDate) - +new Date();
-      let timeLeft = {};
-
-      if (difference > 0) {
-        timeLeft = {
-          hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          menit: Math.floor((difference / 1000 / 60) % 60),
-          detik: Math.floor((difference / 1000) % 60),
-        };
-      }
-      return timeLeft;
-    }
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setTimeLeft(calculateTimeLeft());
-      }, 1000);
-      return () => clearInterval(timer);
-    }, [targetDate]);
-
-    return (
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
-        {Object.keys(timeLeft).map((interval) => (
-          <motion.div
-            key={interval}
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="flex flex-col items-center p-3 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-100"
-          >
-            <span className="text-xl sm:text-2xl font-bold text-slate-600">
-              {timeLeft[interval]}
-            </span>
-            <span className="text-xs text-gray-500 capitalize">{interval}</span>
-          </motion.div>
-        ))}
-      </div>
-    );
-  };
 
   const FloatingHearts = () => {
     return (
@@ -388,51 +346,6 @@ export default function Hero() {
             className="relative max-w-md mx-auto"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-slate-50/50 to-white/50 backdrop-blur-md rounded-2xl" />
-
-            {/* <div className="relative px-4 sm:px-8 py-8 sm:py-10 rounded-2xl border border-slate-100/50">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-px">
-                <div className="w-20 sm:w-32 h-[2px] bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-              </div>
-
-              <div className="space-y-6 text-center">
-                <div className="space-y-3">
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.9 }}
-                    className="flex items-center justify-center space-x-2"
-                  >
-                    <Calendar className="w-4 h-4 text-slate-400" />
-                    <span className="text-gray-700 font-medium text-sm sm:text-base">
-                      {formatEventDate(config.data.date, "full")}
-                    </span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0 }}
-                    className="flex items-center justify-center space-x-2"
-                  >
-                    <Clock className="w-4 h-4 text-slate-400" />
-                    <span className="text-gray-700 font-medium text-sm sm:text-base">
-                      {config.data.time}
-                    </span>
-                  </motion.div>
-                </div>
-
-                <div className="flex items-center justify-center gap-3">
-                  <div className="h-px w-8 sm:w-12 bg-slate-200/50" />
-                  <div className="w-2 h-2 rounded-full bg-slate-200" />
-                  <div className="h-px w-8 sm:w-12 bg-slate-200/50" />
-                </div>
-              </div>
-
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-px">
-                <div className="w-20 sm:w-32 h-[2px] bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-              </div>
-            </div> */}
-
             <div className="absolute -top-2 -right-2 w-16 sm:w-24 h-16 sm:h-24 bg-slate-100/20 rounded-full blur-xl" />
             <div className="absolute -bottom-2 -left-2 w-16 sm:w-24 h-16 sm:h-24 bg-slate-100/20 rounded-full blur-xl" />
           </motion.div>
