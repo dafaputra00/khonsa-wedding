@@ -1,15 +1,23 @@
 import gambar from "../assets/preview.png"
+import bridePhoto from "../assets/bride.png"
+import groomPhoto from "../assets/groom.png";
+import prewed1 from "../assets/bnw1.png";
+import prewed2 from "../assets/bnw2.png";
+import prewed3 from "../assets/bnw3.png";
+import lamaran1 from "../assets/lamaran1.png";
+import lamaran2 from "../assets/lamaran2.png";
+import lamaran3 from "../assets/lamaran3.jpg";
 
 const config = {
   data: {
     title: "Pernikahan Aziz & Khonsa",
     description:
       "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.",
-    groomPhoto: "src/assets/groom.png",
+    groomPhoto: groomPhoto,
     groomName: "Aziz Dafa Putra, S.Kom.",
     groomInitial: "Aziz",
     groomInsta: "dafa_putra_",
-    bridePhoto: "src/assets/bride.png",
+    bridePhoto: bridePhoto,
     brideName: "Khonsa Azmi Afifah, S.Si.",
     brideInitial: "Khonsa",
     brideInsta: "khonsaazmi",
@@ -101,27 +109,27 @@ const config = {
     ],
     galleries: [
       {
-        src: "/src/assets/bnw1.png",
+        src: prewed1,
         alt: "Prewedding Photo 1",
       },
       {
-        src: "/src/assets/bnw2.png",
+        src: prewed2,
         alt: "Prewedding Photo 2",
       },
       {
-        src: "/src/assets/bnw3.png",
+        src: prewed3,
         alt: "Prewedding Photo 2",
       },
       {
-        src: "/src/assets/lamaran1.png",
+        src: lamaran1,
         alt: "Lamaran Photo 1",
       },
       {
-        src: "/src/assets/lamaran2.png",
+        src: lamaran2,
         alt: "Lamaran Photo 2",
       },
       {
-        src: "/src/assets/lamaran3.jpg",
+        src: lamaran3,
         alt: "Lamaran Photo 3",
       },
     ]

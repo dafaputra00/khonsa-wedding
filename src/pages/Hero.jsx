@@ -151,9 +151,6 @@ export default function Hero() {
       <section
         id="surat"
         className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
-        // style={{
-        //   backgroundImage: `url('src/assets/background.jpg')`, // Ganti path sesuai file kamu
-        // }}
       >
         <div className="absolute inset-0 bg-slate-800 z-0" />
 
