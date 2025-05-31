@@ -128,7 +128,7 @@ export default function Wishes() {
               <Marquee
                 speed={10}
                 gradient={false}
-                className="[--duration:40s] py-2"
+                className="[--duration:65s] py-2"
               >
                 {wishes?.map((wish, index) => (
                   <motion.div
@@ -171,7 +171,7 @@ export default function Wishes() {
                       </div>
 
                       {/* Message */}
-                      <p className="text-gray-600 text-sm leading-relaxed mb-2 line-clamp-3">
+                      <p className="text-gray-600 text-sm leading-relaxed mb-2 line-clamp-5">
                         {wish.message}
                       </p>
 
