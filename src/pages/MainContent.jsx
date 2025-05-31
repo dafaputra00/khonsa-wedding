@@ -52,7 +52,7 @@ export default function MainContent() {
             </a>
             , Modified by{" "}
             <a
-              href="https://github.com/dafaputra00"
+              href="https://github.com/khonsaazmi"
               className="hover:underline"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +61,7 @@ export default function MainContent() {
             </a>{" "}
             💙{" "}
             <a
-              href="https://github.com/khonsaazmi"
+              href="https://github.com/dafaputra00"
               className="hover:underline"
               target="_blank"
               rel="noopener noreferrer"
