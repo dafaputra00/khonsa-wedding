@@ -1,4 +1,3 @@
-import gambar from "../assets/preview.png"
 import bridePhoto from "../assets/bride.png"
 import groomPhoto from "../assets/groom.png";
 import prewed1 from "../assets/bnw1.png";
@@ -55,7 +54,7 @@ const config = {
         title: "Resepsi Nikah ☑️",
         date: "2025-06-21",
         startTime: "11:00",
-        endTime: "14:00",
+        endTime: "Selesai",
         location: "Rumah Mempelai Wanita",
         address: "Gg. 7, RT.2/RW.VIII, Karangkobar, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah 53115",
       }
@@ -87,22 +86,22 @@ const config = {
       {
         title: "SMA",
         description: "Pertemuan pertama kami terjadi di SMA, saat itu kami berada di sekolah yang sama namun berbeda kelas. Kami mulai berkenalan saat latihan lempar lembing untuk popda, dan sejak saat itu kami mulai saling mengenal.",
-        image: gambar
+
       },
       {
         title: "Kuliah",
         description: "Setelah lulus SMA, kami dipertemukan kembali di kampus yang sama, fakultas yang sama, namun dengan prodi yang berbeda. Di tempat inilah benih - benih cinta kami mulai tumbuh. Kami mengukir banyak momen bersama di kampus, belajar, dan berbagi cerita.",
-        image: gambar
+
       },
       {
         title: "Komitmen",
         description: "Skripsi adalah momen penting dalam hubungan kami. Kami saling mendukung dan membantu satu sama lain dalam menyelesaikan skripsi. Pada momen inilah, kami berdua merasa semakin dekat dan yakin untuk berkomitmen melangkah ke jenjang yang lebih serius.",
-        image: gambar
+
       },
       {
         title: "Lamaran",
         description: "2 tahun setelah berkomitmen, Aziz datang bersama keluarganya untuk melamar Khonsa. Momen ini sangat spesial bagi kami berdua, karena ini adalah langkah awal menuju pernikahan yang kami impikan.",
-        image: gambar
+
       },
     ],
     galleries: [
